@@ -35,7 +35,7 @@
 
    <style>
     body{
-       background-image: url(https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimg.netbian.com%2Ffile%2F2018%2F0923%2Fe81999978a1897e4375dd12c7b2f252b.jpg&refer=http%3A%2F%2Fimg.netbian.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1616746151&t=4e6bf902e7ebe6bacd80d781ecc0142b);
+       background-image: url(https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fitem%2F201807%2F03%2F20180703124632_uKjcN.jpeg&refer=http%3A%2F%2Fb-ssl.duitang.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1617615443&t=fa8fc9ccc50df47dfb6892d2c465deba);
        background-repeat:no-repeat;
        background-size:cover;
        background-attachment:fixed;
@@ -242,9 +242,7 @@
 
 
 <script>
-    // 每天切换 banner 图.  Switch banner image every day.
-    var bannerUrl = "/medias/banner/" + new Date().getDay() + '.jpg';
-    $('.bg-cover').css('background-image', 'url(' + bannerUrl + ')');
+    $('.bg-cover').css('background-image', 'url(/medias/banner/0.jpg)');
 </script>
 
 
@@ -264,10 +262,19 @@
             <div class="tag-chips">
                 
                 
+                <a href="/tags/%E7%AA%9D/" title="窝: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="窝" style="background-color: #F9EBEA;">窝
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
                 <a href="/tags/blog/" title="blog: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="blog" style="background-color: #F9EBEA;">blog
+                            data-tagname="blog" style="background-color: #F5EEF8;">blog
                         <span class="tag-length">1</span>
                     </span>
                 </a>
@@ -276,7 +283,7 @@
                 <a href="/tags/hexo/" title="hexo: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="hexo" style="background-color: #F5EEF8;">hexo
+                            data-tagname="hexo" style="background-color: #D5F5E3;">hexo
                         <span class="tag-length">1</span>
                     </span>
                 </a>
@@ -285,16 +292,25 @@
                 <a href="/tags/Template/" title="Template: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="Template" style="background-color: #D5F5E3;">Template
+                            data-tagname="Template" style="background-color: #E8F8F5;">Template
                         <span class="tag-length">1</span>
                     </span>
                 </a>
                 
                 
-                <a href="/tags/%E7%AA%9D/" title="窝: 1">
+                <a href="/tags/%EF%BC%9F/" title="？: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="窝" style="background-color: #E8F8F5;">窝
+                            data-tagname="？" style="background-color: #FEF9E7;">？
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/%E6%84%8F%E4%B9%89%E4%B8%8D%E6%98%8E/" title="意义不明: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="意义不明" style="background-color: #F8F9F9;">意义不明
                         <span class="tag-length">1</span>
                     </span>
                 </a>
@@ -323,7 +339,7 @@
 <script type="text/javascript">
     
 
-    $('#tag-wordcloud').jQCloud([{"text":"blog","weight":1,"link":"/tags/blog/"},{"text":"hexo","weight":1,"link":"/tags/hexo/"},{"text":"Template","weight":1,"link":"/tags/Template/"},{"text":"窝","weight":1,"link":"/tags/窝/"}], {
+    $('#tag-wordcloud').jQCloud([{"text":"窝","weight":1,"link":"/tags/窝/"},{"text":"blog","weight":1,"link":"/tags/blog/"},{"text":"hexo","weight":1,"link":"/tags/hexo/"},{"text":"Template","weight":1,"link":"/tags/Template/"},{"text":"？","weight":1,"link":"/tags/？/"},{"text":"意义不明","weight":1,"link":"/tags/意义不明/"}], {
         autoResize: true
     });
 </script>
@@ -389,7 +405,7 @@
 <script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
 
     
-    <div class="container row center-align" style="margin-bottom: 0px !important;">
+    <div class="container row center-align" style="margin-bottom: 15px !important;">
         <div class="col s12 m8 l8 copy-right">
             Copyright&nbsp;&copy;
             
@@ -406,6 +422,50 @@
             
             
             <br>
+            
+            <span id="sitetime">载入运行时间...</span>
+            <script>
+                function siteTime() {
+                    var seconds = 1000;
+                    var minutes = seconds * 60;
+                    var hours = minutes * 60;
+                    var days = hours * 24;
+                    var years = days * 365;
+                    var today = new Date();
+                    var startYear = "2021";
+                    var startMonth = "2";
+                    var startDate = "28";
+                    var startHour = "0";
+                    var startMinute = "0";
+                    var startSecond = "0";
+                    var todayYear = today.getFullYear();
+                    var todayMonth = today.getMonth() + 1;
+                    var todayDate = today.getDate();
+                    var todayHour = today.getHours();
+                    var todayMinute = today.getMinutes();
+                    var todaySecond = today.getSeconds();
+                    var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
+                    var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+                    var diff = t2 - t1;
+                    var diffYears = Math.floor(diff / years);
+                    var diffDays = Math.floor((diff / days) - diffYears * 365);
+                    var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
+                    var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) /
+                        minutes);
+                    var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours -
+                        diffMinutes * minutes) / seconds);
+                    if (startYear == todayYear) {
+                        document.getElementById("year").innerHTML = todayYear;
+                        document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffDays + " 天 " + diffHours +
+                            " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                    } else {
+                        document.getElementById("year").innerHTML = startYear + " - " + todayYear;
+                        document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffYears + " 年 " + diffDays +
+                            " 天 " + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                    }
+                }
+                setInterval(siteTime, 1000);
+            </script>
             
             <br>
             
