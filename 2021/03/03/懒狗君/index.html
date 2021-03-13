@@ -234,10 +234,104 @@
 
 
 
-<main class="container content">
+<main class="post-container content">
 
     
-    <!-- 文章内容详情 -->
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        padding: 35px 0 15px 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        padding-bottom: 30px;
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
 <div id="artDetail">
     <div class="card">
         <div class="card-content article-info">
@@ -254,15 +348,6 @@
                     
                 </div>
                 <div class="col s5 right-align">
-                    
-                    <div class="post-cate">
-                        <i class="fas fa-bookmark fa-fw icon-category"></i>
-                        
-                            <a href="/categories/%E7%AA%9D/" class="post-category">
-                                窝
-                            </a>
-                        
-                    </div>
                     
                 </div>
             </div>
@@ -302,15 +387,8 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="懒狗"><a href="#懒狗" class="headerlink" title="懒狗"></a>懒狗</h1><p>西八懒狗在瞎写  </p>
-<p>有些小众有些争议</p>
-<blockquote>
-<p>游戏<br>动漫<br>美食<br>宠物<br>歌手</p>
-</blockquote>
-<blockquote>
-<p>游戏</p>
-</blockquote>
-<ul>
+                <h1 id="西八懒狗在瞎写"><a href="#西八懒狗在瞎写" class="headerlink" title="西八懒狗在瞎写"></a>西八懒狗在瞎写</h1><p>有些小众，有些争议</p>
+<h2 id="游戏"><a href="#游戏" class="headerlink" title="游戏"></a>游戏</h2><ul>
 <li><p>代表  LOL 心跳文学部  </p>
 <p>游戏作为穷人最普遍的形式，以及时的反馈和低廉的代价就可以较快的获得多巴胺。<br>LOL作为MOBA游戏的代表在世界范围内都有着不小的影响力，与时俱进的审美和友好的联机方式，受较多网瘾开黑爱好者青睐。  </p>
 <pre><code>   GALGAME则在国内较为小众，在霓虹较受广大宅男（otaku）喜爱，每年的夏日祭引来肥宅各国分宅前去朝圣，回到心跳文学部,  
@@ -320,10 +398,7 @@
 <p>心跳文学部：小众向、GALGAME、猎奇</p>
 </li>
 </ul>
-<blockquote>
-<p>动漫</p>
-</blockquote>
-<ul>
+<h2 id="动漫"><a href="#动漫" class="headerlink" title="动漫"></a>动漫</h2><ul>
 <li><p>代表  CLANNAD  天降之物</p>
 <p>懒狗作为国内的OTAKU和霓虹国的OTAKU有着一脉的传统，却也有着各式区别。懒狗是正经的京阿尼众，懒狗觉得京阿尼就是天，天被纵火，但是无可奈何，在网上的捐款也不知是否真的被收到。  </p>
 <pre><code> CL是神作。  
@@ -332,39 +407,27 @@
 <p>CLANNAD：治愈、温馨、校园<br>天降之物：搞笑、日常、催泪</p>
 </li>
 </ul>
-<blockquote>
-<p>美食</p>
-</blockquote>
-<ul>
+<h2 id="美食"><a href="#美食" class="headerlink" title="美食"></a>美食</h2><ul>
 <li><p>代表  和牛 抹茶  </p>
 <p>人类的味蕾似乎从上古时期就未曾改变，对炭火烤的滋滋冒油的肉类完全没有抵抗力。<br>馋狗有幸被它的老哥请吃过价格4w多日元的和牛，对于吾等穷狗来说已经是最贵的晚餐了。<del>吃的时候夹杂了太多口水以至于我…额不是，以至于馋狗似乎并没有细细地品出和牛的味道</del>  不过还是被入口的触感折服。一想到以后恰不到————淦~  </p>
-<p>馋狗挺喜欢抹茶的，包括但不限于抹茶蛋糕、抹茶奶茶、抹茶千层饼等等等等，作为略有执念的抹茶党，是不会承认抹茶奥利奥这玩意儿是抹茶的，按照馋狗的理解抹茶必须是： 无味→甜→微苦→甘 的。所以知道要送给馋狗什么了吗！？  </p>
+<p>馋狗挺喜欢抹茶的，包括但不限于抹茶蛋糕、抹茶奶茶、抹茶千层饼等等等等，作为略有执念的抹茶党，是不会承认抹茶奥利奥这玩意儿是抹茶的，按照馋狗的理解抹茶必须是： 无味→甜→微苦→甘 的。<br>所以知道要送给馋狗什么了吗！？  </p>
 </li>
 </ul>
-<blockquote>
-<p>宠物</p>
-</blockquote>
-<ul>
+<h2 id="宠物"><a href="#宠物" class="headerlink" title="宠物"></a>宠物</h2><ul>
 <li><p>代表 猫科  </p>
 <p>时常有被问道“你是猫派还是狗派？” 我的回答是猫科。猫猫给人的关键词是：优雅、独立、整洁（尽管拉的屎滂臭），敏捷。狗子的关键词是：朋友、贪吃、活力，黏人。<br>从本质上来说，猫猫和狗子都是常见的家宠，都是相当适合饲养的宠物。懒狗是个猫奴，尽管懒狗君目前没有猫猫，不过也是迟早的事。因为搬出去住了所以猫猫计划提上了日程。  </p>
 <p>喜好程度由高到低：挪威森林猫→奶牛猫（乌云盖雪或是四足踏雪）→狸花猫→美短→大橘→柴犬→布偶→其它  </p>
 <p><del>另外提一下：也不知道哪个天才培养了无毛猫，猫猫想不想给他来一刀我不知道，反正懒狗挺想的。</del>  </p>
 </li>
 </ul>
-<blockquote>
-<p>歌手</p>
-</blockquote>
-<ul>
+<h2 id="歌手"><a href="#歌手" class="headerlink" title="歌手"></a>歌手</h2><ul>
 <li><p>代表 中岛美嘉  </p>
 <p>一个从地狱回来的人，上帝听见她的歌声都会责怪自己对这个女人太过残酷吧。一首《雪之华》被翻唱超过二十个版本，在我的歌单里也是翻来覆去听个稀烂，却怎么也听不够。尽管很早就经听过不同版本的雪之华，但是真正令我记住中岛美嘉这个名字，还是要数《曾经我也想过一了百了》，穷狗当时没有网抑云的黑胶，看的是live版，当时还觉得奇怪这首歌为什么要一边跺脚一边唱，唉，知道真相的我眼睛里进了挖掘机。据说这首歌一度使霓虹国的当年自杀率降至二十年中最低，我也直接被圈粉。  </p>
 <p>她的歌，闻者伤心听者落泪，音色中的悲伤不是在愤恨自身的境遇，而是感叹命运的不公……..靠，搞得像在做小学语文题似的。不整了。总之，肖邦的悲怆弹不出她的悲伤。不管是不是营造的人设，她的药我吃了。  </p>
 <p>关键词：深邃，重生，命运</p>
 </li>
 </ul>
-<blockquote>
-<p>作者</p>
-</blockquote>
-<ul>
+<h2 id="作者"><a href="#作者" class="headerlink" title="作者"></a>作者</h2><ul>
 <li><p>代表 太宰治</p>
 <p>好像是什么无赖派的家伙，用懒狗本狗的话来说就是：一盒过期的烂酸奶正要被主人随意丢弃，却发现可以用于浇灌花田（笨蛋），于是便这么做了。<br>对不起，我是花田。对于像人间失格这种流水账，和自我毁灭的调调太适合我了。心里学指出：人越是缺少什么便是越发渴望什么。对于从小到大都被钉在木板上的懒狗，始终一板一眼。傻狗从心底觉得“我要也能像你一样潇洒就好了”。</p>
 <p><del>别说屁了，等我完成了人生目标，我坑定会回归浪狗本狗。</del></p>
@@ -514,10 +577,10 @@
                         <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
                     </ul>
                     <div id="alipay">
-                        <img src="/null" class="reward-img" alt="支付宝打赏二维码">
+                        <img src="/" class="reward-img" alt="支付宝打赏二维码">
                     </div>
                     <div id="wechat">
-                        <img src="/null" class="reward-img" alt="微信打赏二维码">
+                        <img src="/" class="reward-img" alt="微信打赏二维码">
                     </div>
                 </div>
             </div>
@@ -592,16 +655,16 @@
                 
                 <div class="card-action article-tags">
                     
+                    <a href="/tags/%E7%AA%9D/">
+                        <span class="chip bg-color">窝</span>
+                    </a>
+                    
                     <a href="/tags/%EF%BC%9F/">
                         <span class="chip bg-color">？</span>
                     </a>
                     
                     <a href="/tags/%E6%84%8F%E4%B9%89%E4%B8%8D%E6%98%8E/">
                         <span class="chip bg-color">意义不明</span>
-                    </a>
-                    
-                    <a href="/tags/%E7%AA%9D/">
-                        <span class="chip bg-color">窝</span>
                     </a>
                     
                 </div>
@@ -619,9 +682,9 @@
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="基于Hexo的hexo-theme-matery主题搭建博客并优化">
+                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="写作模板">
                         
-                        <span class="card-title">基于Hexo的hexo-theme-matery主题搭建博客并优化</span>
+                        <span class="card-title">写作模板</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -690,6 +753,100 @@
 
 <script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
 
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
 
     
 
