@@ -203,55 +203,9 @@
 </header>
 
     
-<style>
-    .carousel-control {
-        width: 45px;
-        height: 45px;
-        line-height: 55px;
-        border-radius: 45px;
-        background: transparent;
-        cursor: pointer;
-        z-index: 100;
-    }
-
-    #prev-cover {
-        position: absolute;
-        top: 48%;
-        left: 8px;
-    }
-
-    #next-cover {
-        position: absolute;
-        top: 48%;
-        right: 8px;;
-    }
-
-    #prev-cover i {
-        margin-right: 3px;
-    }
-
-    #next-cover i {
-        margin-left: 3px;
-    }
-
-    .carousel-control:hover {
-        background-color: rgba(0, 0, 0, .4);
-    }
-
-    .carousel-control i {
-        color: #fff;
-        font-size: 2.4rem;
-    }
-</style>
-
-
-
-<div class="carousel carousel-slider center index-cover" data-indicators="true" style="margin-top: -64px;">
-    
-
-    <div class="carousel-item red white-text bg-cover about-cover">
-        <div class="container">
-            <div class="row">
+    <div class="bg-cover pd-header about-cover">
+    <div class="container">
+    <div class="row">
     <div class="col s10 offset-s1 m8 offset-m2 l8 offset-l2">
         <div class="brand">
             <div class="title center-align">
@@ -286,192 +240,12 @@
 </script>
 
 
-
-            <div class="cover-btns">
-                <a href="#articles" class="waves-effect waves-light btn">
-                    <i class="fa fa-angle-double-down"></i>开始阅读
-                </a>
-
-                
-            </div>
-            <div class="cover-social-link">
-    <a href="https://github.com/deepdarkfantasy01" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
-        <i class="fab fa-github"></i>
-    </a>
-
-
-
-    <a href="mailto:2352608869@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
-        <i class="fas fa-envelope-open"></i>
-    </a>
-
-
-
-
-
-
-
-    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=2352608869" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 2352608869" data-position="top" data-delay="50">
-        <i class="fab fa-qq"></i>
-    </a>
-
-
-
-
-
-
-
-</div>
-        </div>
     </div>
-
-    
-        
-
-        
-            
-            <div class="carousel-item amber white-text carousel-post bg-cover"
-                 style="background-image: url('/images/0.jpg');">
-                <div class="container">
-                    <div class="row">
-                        <div class="col s10 offset-s1">
-                            <div class="title center-align">西八懒狗的喜欢</div>
-                            <div class="description center-align">
-                                
-                                    现在可以公开的信息
-                                
-                            </div>
-                            <div class="cover-btns">
-                                <a href="/2021/03/03/%E6%87%92%E7%8B%97%E5%90%9B%E7%9A%84%E5%96%9C%E6%AC%A2/" class="waves-effect waves-light btn"
-                                   target="_blank">
-                                    <i class="icon fa fa-eye fa-fw"></i>阅读更多
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        
-    
 </div>
-
-<script>
-    $(function () {
-        let coverSlider = $('.carousel');
-
-        //用户触摸轮播自动 restartPlay 是否生效
-        let initUserPressedOrDraggedActive = false
-
-        //用户触摸轮播自动 restartPlay
-        function initUserPressedOrDragged(instance) {
-            setInterval(() => {
-                if (instance.pressed || instance.dragged) {
-                    // console.log('initUserPressedOrDragged: ',instance.pressed,instance.dragged)
-                    restartPlay()
-                }
-            }, 1000)
-        }
-
-        coverSlider.carousel({
-            duration: Number('120'),
-            fullWidth: true,
-            indicators: 'false' === 'true',
-            onCycleTo() {
-                if (!initUserPressedOrDraggedActive) {
-                    // console.log('initUserPressedOrDraggedActive')
-                    initUserPressedOrDragged(this)
-                    initUserPressedOrDraggedActive = true
-                }
-            },
-        })
-
-        let carouselIntervalId;
-        
-
-        function restartPlay() {
-            
-        };
-
-        
-    });
-</script>
-
 
 
 <main class="content">
 
-    
-    <div id="indexCard" class="index-card">
-        <div class="container ">
-            <div class="card">
-                <div class="card-content">
-                    
-                        <div class="dream">
-    
-    <div class="title center-align">
-        <i class="far fa-lightbulb"></i>&nbsp;&nbsp;某人民教师
-    </div>
-    
-    <div class="row">
-        <div class="col l8 offset-l2 m10 offset-m1 s10 offset-s1 center-align text">
-            我不会参加她的葬礼，但是我会写一封信庆贺它的举行
-        </div>
-    </div>
-</div>
-
-                    
-
-                    
-
-                    
-
-                    
-                    <div id="recommend-sections" class="recommend">
-                        
-
-
-
-
-
-<div class="title"><i class="far fa-thumbs-up"></i>&nbsp;&nbsp;推荐文章</div>
-
-<div class="row">
-
-    
-    
-    <div class="col s12" >
-        
-            <div class="post-card" style="background-image: url('/medias/featureimages/19.jpg')">
-            
-            <div class="post-body">
-                <div class="post-categories">
-                    
-                        
-                            <a href="/categories/%E6%87%92%E7%8B%97%E5%90%9B/" class="category">懒狗君</a>
-                        
-                    
-                </div>
-                <a href="/2021/03/05/%E4%BD%A0%E5%A5%BD%EF%BC%8C%E5%88%9D%E6%AC%A1%E8%A7%81%E9%9D%A2/">
-                    <h3 class="post-title">HI!初次见面</h3>
-                </a>
-                <p class="post-description">对自己的简述</p>
-                <a href="/2021/03/05/%E4%BD%A0%E5%A5%BD%EF%BC%8C%E5%88%9D%E6%AC%A1%E8%A7%81%E9%9D%A2/" class="read-more btn waves-effect waves-light" style="background: linear-gradient(to right, #FF5E3A 0%, #FF2A68 100%)" target="_blank">
-                    <i class="icon far fa-eye fa-fw"></i>阅读更多
-                </a>
-            </div>
-        </div>
-    </div>
-    
-
-</div>
-
-
-                    </div>
-                    
-                </div>
-            </div>
-        </div>
-    </div>
     
 
     
@@ -482,29 +256,40 @@
             
             <div class="article col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
-                    <a href="/2021/05/06/5.06%E6%96%BD%E5%B7%A5%E6%97%A5%E5%BF%97/">
+                    <a href="/2021/02/21/%E6%90%AD%E5%BB%BA%E5%80%9F%E5%8A%9B/">
                         <div class="card-image">
                             
                             
-                            <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="施工日志">
+                            <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="搭建借力">
                             
-                            <span class="card-title">施工日志</span>
+                            <span class="card-title">搭建借力</span>
                         </div>
                     </a>
 
                     <div class="card-content article-content">
                         <div class="summary block-with-text">
                             
-                                时间 2021-5-06多云…….实际烈阳  
-南风 3-4级  
-16 ~ 25℃ 空气指数：良
-项目进展群楼预埋基本结束，新风机房改动较大：消火栓位置施工错位，进行调整更改。地源热泵水管预留位置更改。  
-方总经工到访进行技术探讨，  
+                                搭建参考
+b站年轻人的网站
+知乎有点装逼范
+csdn大佬聚集地
+
+搭建帮助
+gitub万能的宝库
+node.js啊这，嗬忒
+hexo轻量搭建
+vs code不错的编辑器
+
+
+超链接b站网址  
+知乎网址
+csdn网址
+下载地址稍后~~并不会
                             
                         </div>
                         <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-05-06
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-02-21
                             </span>
                             <span class="publish-author">
                                 
@@ -515,52 +300,31 @@
                         </div>
                     </div>
 
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/%E6%96%BD%E5%B7%A5/">
-                            <span class="chip bg-color">施工</span>
-                        </a>
-                        
-                        <a href="/tags/%E6%97%A5%E5%BF%97/">
-                            <span class="chip bg-color">日志</span>
-                        </a>
-                        
-                        <a href="/tags/718%E9%A1%B9%E7%9B%AE/">
-                            <span class="chip bg-color">718项目</span>
-                        </a>
-                        
-                    </div>
                     
                 </div>
             </div>
             
             <div class="article col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
-                    <a href="/2021/05/05/5.05%E6%96%BD%E5%B7%A5%E6%97%A5%E5%BF%97/">
+                    <a href="/2021/02/20/hello-world/">
                         <div class="card-image">
                             
                             
-                            <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="施工日志">
+                            <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Hello World">
                             
-                            <span class="card-title">施工日志</span>
+                            <span class="card-title">Hello World</span>
                         </div>
                     </a>
 
                     <div class="card-content article-content">
                         <div class="summary block-with-text">
                             
-                                时间 2021-5-05多云……实际烈阳  
-南风 2级  
-16 ~ 27℃ 空气指数：良
-项目进展群楼底板筋绑扎大体结束，预埋敷设中  
-个人进展对718整体及部分施工进行跟踪核对剩余PE管，交接运输人员…搬运工です  
-
+                                Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hex
                             
                         </div>
                         <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-05-05
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-02-20
                             </span>
                             <span class="publish-author">
                                 
@@ -571,234 +335,6 @@
                         </div>
                     </div>
 
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/%E6%96%BD%E5%B7%A5/">
-                            <span class="chip bg-color">施工</span>
-                        </a>
-                        
-                        <a href="/tags/%E6%97%A5%E5%BF%97/">
-                            <span class="chip bg-color">日志</span>
-                        </a>
-                        
-                        <a href="/tags/718%E9%A1%B9%E7%9B%AE/">
-                            <span class="chip bg-color">718项目</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-            
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/2021/05/04/5.04%E6%96%BD%E5%B7%A5%E6%97%A5%E5%BF%97/">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="施工日志">
-                            
-                            <span class="card-title">施工日志</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                时间 2021-5-04雨
-项目进展主楼五层顶板结束，结构钢筋大体结束，模板敷设中群楼四层地板敷设结束，底板筋绑扎中，预埋敷设中，未得图纸进展缓慢预计明日群楼暂缓，主楼主施工  
-PS：，联系得知 目前业主方要求在群楼顶层建设约26人大型包
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-05-04
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-user fa-fw"></i>
-                                懒狗君
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/%E6%96%BD%E5%B7%A5/">
-                            <span class="chip bg-color">施工</span>
-                        </a>
-                        
-                        <a href="/tags/%E6%97%A5%E5%BF%97/">
-                            <span class="chip bg-color">日志</span>
-                        </a>
-                        
-                        <a href="/tags/718%E9%A1%B9%E7%9B%AE/">
-                            <span class="chip bg-color">718项目</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-            
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/2021/05/03/5.03%E6%96%BD%E5%B7%A5%E6%97%A5%E5%BF%97/">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="施工日志">
-                            
-                            <span class="card-title">施工日志</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                时间 2021-5-03阳
-项目进展主楼五楼顶板完毕，向上部延伸群楼四层地面钢筋绑扎地下室分水器阀门安装
-个人进展对718整体及部分施工进行跟踪
-
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-05-03
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-user fa-fw"></i>
-                                懒狗君
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/%E6%96%BD%E5%B7%A5/">
-                            <span class="chip bg-color">施工</span>
-                        </a>
-                        
-                        <a href="/tags/%E6%97%A5%E5%BF%97/">
-                            <span class="chip bg-color">日志</span>
-                        </a>
-                        
-                        <a href="/tags/718%E9%A1%B9%E7%9B%AE/">
-                            <span class="chip bg-color">718项目</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-            
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/2021/05/02/5.02%E6%96%BD%E5%B7%A5%E6%97%A5%E5%BF%97/">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="施工日志">
-                            
-                            <span class="card-title">施工日志</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                时间 2021-5-02阳
-项目进展几乎无实际进展，工人还在放假期间。地下室分集水器优化，地下室夹层母线及上方的桥架初步决策
-个人进展对笛莎1-17层各层的分集水器使用的地暖管进行核对。718的QC课题拟定，目前初拟四个课题。      1
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-05-02
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-user fa-fw"></i>
-                                懒狗君
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/%E6%96%BD%E5%B7%A5/">
-                            <span class="chip bg-color">施工</span>
-                        </a>
-                        
-                        <a href="/tags/%E6%97%A5%E5%BF%97/">
-                            <span class="chip bg-color">日志</span>
-                        </a>
-                        
-                        <a href="/tags/718%E9%A1%B9%E7%9B%AE/">
-                            <span class="chip bg-color">718项目</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-            
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/2021/05/01/5.01%E6%96%BD%E5%B7%A5%E6%97%A5%E5%BF%97/">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="施工日志">
-                            
-                            <span class="card-title">施工日志</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                时间 2021-5-01休息
-
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-05-01
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-user fa-fw"></i>
-                                懒狗君
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/%E6%96%BD%E5%B7%A5/">
-                            <span class="chip bg-color">施工</span>
-                        </a>
-                        
-                        <a href="/tags/%E6%97%A5%E5%BF%97/">
-                            <span class="chip bg-color">日志</span>
-                        </a>
-                        
-                        <a href="/tags/718%E9%A1%B9%E7%9B%AE/">
-                            <span class="chip bg-color">718项目</span>
-                        </a>
-                        
-                    </div>
                     
                 </div>
             </div>
@@ -813,18 +349,18 @@ PS：，联系得知 目前业主方要求在群楼顶层建设约26人大型包
     <div class="row">
         <div class="col s6 m4 l4">
             
-            <a class="left btn-floating btn-large disabled">
+            <a href="/page/2/"
+               class="left btn-floating btn-large waves-effect waves-light bg-color">
                 <i class="fas fa-angle-left"></i>
             </a>
             
         </div>
         <div class="page-info col m4 l4 hide-on-small-only">
-            <div class="center-align b-text-gray">1 / 3</div>
+            <div class="center-align b-text-gray">3 / 3</div>
         </div>
         <div class="col s6 m4 l4">
             
-            <a href="/page/2/"
-               class="right btn-floating btn-large waves-effect waves-light bg-color">
+            <a class="right btn-floating btn-large disabled">
                 <i class="fas fa-angle-right"></i>
             </a>
             
